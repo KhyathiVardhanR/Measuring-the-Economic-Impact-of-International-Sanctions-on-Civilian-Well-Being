@@ -1,0 +1,19 @@
+Data Acquisition – Milestone 1
+
+Overview:
+This project uses two primary datasets to study the relationship between international sanctions and civilian economic well-being. The datasets were chosen to capture both sanction-related activity and measurable economic outcomes affecting civilians.
+
+Data Source 1: GDELT Project
+The Global Database of Events, Language, and Tone (GDELT) provides event-level data extracted from news sources around the world. This dataset is used to identify and quantify sanction-related events reported in international media. Sanction activity will be measured by filtering events related to economic sanctions and aggregating them by country and year.
+
+Relevance:
+GDELT allows sanction activity to be tracked over time and across countries, providing a proxy for the intensity and frequency of international sanctions affecting a nation.
+
+Data Source 2: World Bank and IMF Economic Indicators
+Economic data is obtained from publicly available World Bank and International Monetary Fund (IMF) datasets. The indicators used in this project include inflation rate, unemployment rate, and GDP growth, which are commonly used measures of civilian economic conditions.
+
+Relevance:
+These indicators reflect changes in prices, employment opportunities, and overall economic growth, all of which directly impact civilian well-being.
+
+Data Accessibility and Reproducibility:
+All datasets used in this project are publicly available and free to access. Data can be downloaded directly from the respective data portals or retrieved programmatically using scripts included in the repository, ensuring that the analysis is reproducible.

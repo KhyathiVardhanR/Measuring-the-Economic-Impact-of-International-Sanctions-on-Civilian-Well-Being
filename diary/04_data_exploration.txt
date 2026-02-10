@@ -1,0 +1,20 @@
+Data Exploration – Milestone 1
+
+Overview:
+Initial data exploration was conducted to better understand the structure, quality, and behavior of the sanction-related and economic indicator datasets. This step focused on descriptive statistics, basic visualizations, and identifying potential data issues that may require attention in later stages of the project.
+
+Descriptive Statistics:
+Summary statistics were generated for sanction event counts, inflation rates, unemployment rates, and GDP growth. These statistics provided insight into the range, central tendency, and variability of each variable across countries and years.
+
+Visual Exploration:
+Line plots were created to visualize trends in economic indicators alongside sanction activity over time. These visualizations helped identify periods of increased sanction activity and observe how inflation, unemployment, and GDP growth behaved during those periods.
+
+Missing Values and Data Quality:
+Some missing values were observed in the economic indicator data, particularly for unemployment rates in earlier years for certain countries. Sanction-related event data also varies significantly by country and year, reflecting differences in media coverage and reporting frequency.
+
+Initial Observations:
+Preliminary exploration suggests that periods of increased sanction activity are often accompanied by noticeable changes in one or more economic indicators. However, patterns are not uniform across all countries, indicating that the economic effects of sanctions may vary by context.
+
+Notes for Future Work:
+Further analysis will be needed to address missing values, explore lagged effects, and assess whether observed relationships remain consistent across different countries and time periods.
+

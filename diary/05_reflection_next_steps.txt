@@ -1,0 +1,15 @@
+Reflection and Next Steps – Milestone 1
+
+Reflection:
+Milestone 1 established the foundation for the project by clearly defining the research question, identifying appropriate data sources, and organizing the data into a structured format. The problem formulation process helped narrow the scope of the project to focus on measurable civilian economic indicators and their relationship with international sanctions.
+
+Acquiring data from multiple sources highlighted the importance of reproducibility and documentation. 
+
+Designing a relational database emphasized how careful schema planning enables integration of different datasets and supports efficient analysis. Initial data exploration provided valuable insight into the structure and limitations of the data, including missing values and variation across countries and time periods.
+
+These early exploration steps reinforced the need to be cautious when interpreting patterns and to distinguish between correlation and causation.
+
+Next Steps:
+In future milestones, the project will expand on this foundation by performing more detailed statistical analysis to better understand observed relationships. This will include exploring lagged effects of sanctions, comparing results across countries, and refining visualizations for clearer interpretation.
+
+Additional work will also focus on improving data quality through handling missing values and evaluating alternative measures of sanction intensity. The final stages of the project will aim to translate analytical findings into clear insights while acknowledging limitations and assumptions.

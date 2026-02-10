@@ -1,0 +1,22 @@
+Data Acquisition II – Database Storage
+
+Overview:
+To integrate sanction-related data with economic indicators, a relational database was created using SQLite. Storing the data in a structured database allows efficient querying, consistency, and easier integration of multiple data sources.
+
+Database Choice:
+SQLite was selected because it is lightweight, easy to use, and well-suited for small to medium-sized datasets. It also integrates smoothly with Python and pandas, making it appropriate for rapid prototyping and reproducible analysis.
+
+Database Schema:
+The database consists of two main tables: one for sanction-related activity and one for economic indicators. Both tables are structured using country and year as key attributes to enable proper alignment across datasets.
+
+Sanctions Table:
+This table stores aggregated sanction-related event data derived from GDELT. Each record represents the number of sanction-related events associated with a specific country in a given year.
+
+Economics Table:
+This table stores civilian economic indicators obtained from World Bank and IMF data. Each record includes inflation rate, unemployment rate, and GDP growth for a given country and year.
+
+Integration Strategy:
+Both tables use country and year as shared fields, allowing them to be joined for analysis. This design enables comparison of sanction activity and economic indicators over the same time periods.
+
+Reproducibility:
+The database is generated programmatically using Python scripts included in the repository. This ensures that the database can be recreated from raw data sources, supporting transparency and reproducibility.
