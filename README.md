@@ -14,3 +14,10 @@ of World Bank economic indicators (inflation, unemployment, GDP growth)
 for analyzing the impact of international sanctions on civilian well-being.
 
 The analysis focuses on identifying short-term and long-term patterns in economic indicators following sanction events.
+
+## Repository Structure
+
+- data/raw/ – World Bank economic indicator datasets
+- notebooks/ – Jupyter notebooks for data acquisition and exploration
+- diary/ – Milestone documentation and reflections
+
