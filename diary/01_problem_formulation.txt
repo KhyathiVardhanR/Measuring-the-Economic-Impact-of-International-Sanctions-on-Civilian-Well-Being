@@ -1,1 +1,24 @@
+Problem Formulation – Milestone 1
+
+Project Title:
+Measuring the Economic Impact of International Sanctions on Civilian Well-Being
+
+Problem Statement:
+How are international sanctions associated with changes in key civilian economic indicators such as inflation, unemployment, and GDP growth?
+
+Central Research Question:
+How are international sanctions associated with long-term changes in key civilian economic indicators such as inflation, unemployment, and GDP growth over time?
+
+Inputs:
+The primary inputs for this project include sanction-related event data and economic indicator data. Sanction activity will be represented using data derived from global news reports, while economic conditions will be measured using official statistics such as inflation rates, unemployment rates, and GDP growth.
+
+Outputs:
+The expected outputs of this project include descriptive statistics, trend visualizations, and correlation analyses that illustrate how changes in sanction activity relate to changes in civilian economic indicators over time.
+
+Time Horizon:
+The analysis will focus on annual data over a multi-year period, approximately from 2000 to 2023, depending on data availability for each country and indicator.
+
+Why This Problem Matters:
+Sanctions are intended to apply pressure on governments, but their economic effects may be experienced most directly by civilians. Understanding how sanctions are associated with inflation, unemployment, and economic growth can help provide insight into their broader social consequences and inform future policy discussions.
+
 
