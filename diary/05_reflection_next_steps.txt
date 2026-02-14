@@ -1,15 +1,26 @@
 Reflection and Next Steps – Milestone 1
 
-Reflection:
-Milestone 1 established the foundation for the project by clearly defining the research question, identifying appropriate data sources, and organizing the data into a structured format. The problem formulation process helped narrow the scope of the project to focus on measurable civilian economic indicators and their relationship with international sanctions.
 
-Acquiring data from multiple sources highlighted the importance of reproducibility and documentation. 
+Reflection
 
-Designing a relational database emphasized how careful schema planning enables integration of different datasets and supports efficient analysis. Initial data exploration provided valuable insight into the structure and limitations of the data, including missing values and variation across countries and time periods.
+Milestone 1 established a structured and multidimensional foundation for analyzing the civilian impact of international sanctions. The research question was refined to move beyond simple macroeconomic indicators and incorporate trade flows, poverty, and social well-being measures.
 
-These early exploration steps reinforced the need to be cautious when interpreting patterns and to distinguish between correlation and causation.
+The data acquisition process emphasized the importance of integrating multiple datasets, including sanctions severity measures, macroeconomic indicators, trade data, and household-level social indicators. This broadened approach strengthened the project’s ability to capture both national economic shocks and real civilian outcomes.
 
-Next Steps:
-In future milestones, the project will expand on this foundation by performing more detailed statistical analysis to better understand observed relationships. This will include exploring lagged effects of sanctions, comparing results across countries, and refining visualizations for clearer interpretation.
+Building a relational SQLite database reinforced the value of careful schema design. Structuring the data as a country-year panel allows consistent alignment across sanctions, economic indicators, trade flows, and social variables. This organization supports future causal analysis and ensures scalability.
 
-Additional work will also focus on improving data quality through handling missing values and evaluating alternative measures of sanction intensity. The final stages of the project will aim to translate analytical findings into clear insights while acknowledging limitations and assumptions.
+Initial exploratory analysis provided insight into cross-country variation, trade contraction patterns, inflation volatility, and data limitations such as missing values and inconsistent reporting. These findings highlighted the importance of distinguishing correlation from causation and confirmed the need for more rigorous econometric modeling in later stages.
+
+
+Next Steps
+
+In the next phase of the project, the analysis will move from descriptive exploration to formal statistical modeling. Planned steps include:
+
+- Implementing Difference-in-Differences and event-study designs to evaluate sanction effects over time
+- Testing lagged and dynamic impacts of sanctions on economic and social indicators
+- Conducting subgroup analysis to assess heterogeneous effects across income levels and regions
+- Refining sanction severity measures and comparing alternative specifications
+- Addressing missing data through structured cleaning and validation procedures
+- Evaluating robustness by controlling for confounding factors such as conflict or global economic shocks
+
+The final stages of the project will focus on interpreting results carefully, acknowledging methodological limitations, and translating findings into policy-relevant insights regarding the civilian consequences of international sanctions.
