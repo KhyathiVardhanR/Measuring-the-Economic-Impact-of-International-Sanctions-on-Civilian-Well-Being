@@ -3,61 +3,98 @@ Data Exploration – Milestone 1
 
 Overview
 
-Initial exploratory data analysis was conducted to understand the structure, consistency, and behavior of the multidimensional panel dataset. This dataset includes sanctions intensity measures, macroeconomic indicators, trade flows, and household-level social indicators. The objective of this stage was to identify patterns, detect data limitations, and evaluate the feasibility of later econometric modeling.
+Initial exploratory data analysis (EDA) was conducted to examine the structure, consistency, and variation within the multidimensional country-year panel dataset. The dataset integrates sanctions intensity measures, trade transmission variables, macroeconomic indicators, household-level welfare measures, and political/conflict controls.
+
+The purpose of this stage was to assess data quality, evaluate cross-country and temporal variation, identify potential confounders, and determine feasibility for fixed-effects and event-study estimation.
 
 
 Descriptive Statistics
 
-Summary statistics were generated for the following variables:
+Summary statistics were generated for key treatment, mechanism, outcome, and control variables:
 
-- Sanction intensity measures (event counts, severity indicators)
-- GDP growth, inflation, unemployment
-- Trade flows (food imports, medicine imports, oil exports)
-- Social indicators (poverty rate, inequality, child mortality where available)
+Treatment Variables:
+- Sanction active indicator
+- Sanction duration
+- Constructed sanction intensity index
 
-These statistics provided insight into distribution, central tendencies, outliers, and cross-country variation across years. Significant variation was observed in sanction intensity and trade volumes across countries and time periods.
+Transmission Mechanism:
+- Food imports
+- Pharmaceutical imports
+- Oil exports
+- Fuel imports
+
+Macroeconomic Outcomes:
+- GDP growth
+- Inflation rate
+- Unemployment rate
+
+Household and Social Outcomes:
+- Poverty rate
+- Income inequality (Gini index)
+- Under-5 child mortality
+- School enrollment
+
+Political and Conflict Controls:
+- Armed conflict incidence
+- Conflict intensity
+- Regime type score
+- Leadership turnover indicator
+
+Descriptive statistics revealed substantial cross-country heterogeneity in sanction exposure, trade flows, and welfare indicators, supporting the suitability of panel modeling.
 
 
 Visual Exploration
 
-Time-series plots were created to examine:
+Time-series and event-aligned plots were constructed to evaluate:
 
-- Economic indicators before and after sanction periods
-- Trade shocks in essential goods during high sanction years
-- Changes in social indicators following major sanction episodes
+- Pre- and post-sanction dynamics in trade flows
+- Inflation and GDP responses following sanction onset
+- Changes in poverty and child mortality after prolonged sanctions
+- Political instability indicators during high-intensity sanction periods
 
-Preliminary visual patterns suggest that sanction intensification often coincides with trade contraction and inflation spikes in certain cases. However, effects are heterogeneous across countries, suggesting context-specific transmission mechanisms.
+Preliminary patterns suggest that sanction episodes often coincide with trade contraction and inflation volatility. In some cases, prolonged sanctions are associated with worsening social indicators. However, effects are heterogeneous and not uniform across countries.
+
+These findings reinforce the importance of structured econometric identification rather than simple correlation.
 
 
 Missing Values and Data Quality Assessment
 
 Several data challenges were identified:
 
-- Missing unemployment data for earlier years in certain countries
-- Incomplete social indicators for some low-income countries
-- High variability in sanction event counts due to differences in media reporting intensity
-- Potential structural breaks during conflict years
+- Missing unemployment and poverty data for earlier years in certain countries
+- Gaps in social indicators for lower-income countries
+- Trade reporting inconsistencies in early 2000s data
+- Structural breaks in economic variables during armed conflict periods
 
-Data cleaning strategies and imputation methods will be considered in future stages to address these gaps while maintaining analytical integrity.
+Conflict variables were cross-referenced to identify years where war-related shocks may confound sanction effects.
+
+Future data preparation steps include:
+
+- Harmonizing country codes across datasets
+- Addressing missing values through careful imputation or balanced-panel restrictions
+- Testing robustness under alternative sample specifications
 
 
 Preliminary Observations
 
-Initial exploration indicates that sanction periods are frequently associated with:
+Exploratory analysis suggests that sanction periods are frequently associated with:
 
-- Increased inflation
-- Declines in trade flows of key sectors
-- Greater volatility in economic indicators
+- Declines in essential goods trade flows
+- Increased inflation volatility
+- Deterioration in selected welfare indicators under prolonged exposure
 
-However, the magnitude and persistence of effects vary across countries. This reinforces the need for structured causal methods such as Difference-in-Differences and event-study designs in subsequent analysis.
+However, because sanctions are not randomly assigned and often coincide with geopolitical crises, these patterns cannot be interpreted causally without controlling for country fixed effects, year effects, and conflict variables.
 
 
 Next Steps
 
-Future analysis will:
+The next phase will transition from descriptive analysis to formal econometric modeling:
 
-- Address missing values and standardize panel structure
-- Explore lagged and dynamic effects of sanctions
-- Conduct subgroup analysis (income level, region)
-- Implement econometric models to test causal relationships
-- Evaluate robustness using alternative sanction severity measures
+- Implement two-way fixed-effects panel regressions
+- Conduct event-study analysis to test dynamic effects
+- Evaluate lagged responses of trade and welfare indicators
+- Test mediation effects through trade transmission channels
+- Include conflict and regime controls to strengthen causal interpretation
+- Perform robustness checks using alternative sanction intensity specifications
+
+These steps will allow rigorous evaluation of whether sanctions generate measurable civilian hardship and whether economic stress coincides with political instability.
