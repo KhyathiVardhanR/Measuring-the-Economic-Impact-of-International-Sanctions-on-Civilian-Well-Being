@@ -3,24 +3,31 @@ Reflection and Next Steps – Milestone 1
 
 Reflection
 
-Milestone 1 established a structured and multidimensional foundation for analyzing the civilian impact of international sanctions. The research question was refined to move beyond simple macroeconomic indicators and incorporate trade flows, poverty, and social well-being measures.
+Milestone 1 established the theoretical and empirical foundation for analyzing international sanctions as instruments of economic coercion and evaluating their impact on civilian well-being.
 
-The data acquisition process emphasized the importance of integrating multiple datasets, including sanctions severity measures, macroeconomic indicators, trade data, and household-level social indicators. This broadened approach strengthened the project’s ability to capture both national economic shocks and real civilian outcomes.
+The research framework was refined to move beyond isolated macroeconomic indicators and toward a structured treatment–mechanism–outcome model. By integrating sanctions data with trade flows, macroeconomic indicators, household welfare measures, and political/conflict controls, the project now captures both economic transmission channels and broader societal effects.
 
-Building a relational SQLite database reinforced the value of careful schema design. Structuring the data as a country-year panel allows consistent alignment across sanctions, economic indicators, trade flows, and social variables. This organization supports future causal analysis and ensures scalability.
+The data acquisition process emphasized harmonization across multiple sources and the construction of a unified country-year panel dataset. Incorporating trade variables strengthened the ability to test transmission mechanisms, while adding political and conflict controls improved the credibility of future causal inference.
 
-Initial exploratory analysis provided insight into cross-country variation, trade contraction patterns, inflation volatility, and data limitations such as missing values and inconsistent reporting. These findings highlighted the importance of distinguishing correlation from causation and confirmed the need for more rigorous econometric modeling in later stages.
+The relational SQLite database reinforced the importance of structured schema design and reproducible workflows. Organizing the data into treatment, mechanism, outcome, and control tables ensures scalability and supports advanced econometric modeling.
+
+Exploratory data analysis revealed substantial cross-country heterogeneity, dynamic patterns around sanction onset, and potential confounding from armed conflict. These findings underscore the importance of moving beyond descriptive correlation and adopting rigorous identification strategies in subsequent stages.
 
 
 Next Steps
 
-In the next phase of the project, the analysis will move from descriptive exploration to formal statistical modeling. Planned steps include:
+The next phase transitions from exploratory analysis to formal econometric evaluation.
 
-- Implementing Difference-in-Differences and event-study designs to evaluate sanction effects over time
-- Testing lagged and dynamic impacts of sanctions on economic and social indicators
-- Conducting subgroup analysis to assess heterogeneous effects across income levels and regions
-- Refining sanction severity measures and comparing alternative specifications
-- Addressing missing data through structured cleaning and validation procedures
-- Evaluating robustness by controlling for confounding factors such as conflict or global economic shocks
+Planned steps include:
 
-The final stages of the project will focus on interpreting results carefully, acknowledging methodological limitations, and translating findings into policy-relevant insights regarding the civilian consequences of international sanctions.
+- Implementing two-way fixed-effects panel regressions to estimate sanction effects
+- Conducting event-study analysis to examine dynamic pre- and post-sanction trends
+- Testing lag structures to capture delayed transmission effects
+- Evaluating mediation through trade contraction channels
+- Incorporating armed conflict and regime controls to mitigate confounding bias
+- Performing subgroup analysis by income level, regime type, and sanction intensity
+- Conducting robustness checks using alternative sanction severity specifications and balanced panel restrictions
+
+An exploratory extension will examine whether prolonged economic hardship coincides with political instability or leadership turnover, while maintaining analytical neutrality.
+
+The final stages of the project will focus on careful interpretation of results, explicit acknowledgment of identification limitations, and discussion of policy implications related to the humanitarian and political consequences of economic sanctions.
