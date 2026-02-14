@@ -1,22 +1,98 @@
 Data Acquisition II – Database Storage
 
-Overview:
-To integrate sanction-related data with economic indicators, a relational database was created using SQLite. Storing the data in a structured database allows efficient querying, consistency, and easier integration of multiple data sources.
 
-Database Choice:
-SQLite was selected because it is lightweight, easy to use, and well-suited for small to medium-sized datasets. It also integrates smoothly with Python and pandas, making it appropriate for rapid prototyping and reproducible analysis.
+Overview
 
-Database Schema:
-The database consists of two main tables: one for sanction-related activity and one for economic indicators. Both tables are structured using country and year as key attributes to enable proper alignment across datasets.
+To integrate sanctions data with economic, trade, and social indicators, a relational database was implemented using SQLite. Structuring the data in a relational format ensures consistency, efficient querying, and scalable integration of multiple datasets. This database supports the construction of a panel dataset aligned by country and year.
 
-Sanctions Table:
-This table stores aggregated sanction-related event data derived from GDELT. Each record represents the number of sanction-related events associated with a specific country in a given year.
 
-Economics Table:
-This table stores civilian economic indicators obtained from World Bank and IMF data. Each record includes inflation rate, unemployment rate, and GDP growth for a given country and year.
+Database Choice
 
-Integration Strategy:
-Both tables use country and year as shared fields, allowing them to be joined for analysis. This design enables comparison of sanction activity and economic indicators over the same time periods.
+SQLite was selected because it is lightweight, portable, and well-suited for small to medium-sized research datasets. It integrates seamlessly with Python and pandas, allowing automated data cleaning, transformation, and database generation. Its file-based structure also supports full reproducibility and easy sharing.
 
-Reproducibility:
-The database is generated programmatically using Python scripts included in the repository. This ensures that the database can be recreated from raw data sources, supporting transparency and reproducibility.
+
+Database Schema
+
+The database is designed as a country-year panel structure. Each table uses country and year as key attributes to ensure proper alignment across datasets.
+
+The schema includes the following core tables:
+
+
+1. Sanctions Table
+
+This table stores structured sanctions data. Each record includes:
+
+- Country
+- Year
+- Sanction start and end indicators
+- Sanction type (financial, trade, targeted)
+- Severity measures (sector coverage, financial restrictions)
+- Aggregated sanction-related event counts (from GDELT)
+
+This allows sanctions to be measured both by intensity and classification.
+
+
+2. Macroeconomic Indicators Table
+
+This table includes:
+
+- Country
+- Year
+- GDP growth
+- Inflation rate
+- Unemployment rate
+
+These indicators capture national-level economic conditions.
+
+
+3. Trade and Sectoral Table
+
+This table captures transmission mechanisms and includes:
+
+- Country
+- Year
+- Food imports
+- Medicine imports
+- Oil exports
+- Fuel imports
+
+Tracking trade flows allows identification of how sanctions affect essential goods.
+
+
+4. Social and Household Indicators Table
+
+This table includes:
+
+- Country
+- Year
+- Poverty rate
+- Income inequality (Gini index)
+- Under-5 child mortality
+- Nutrition indicators
+- Education indicators (if available)
+
+These variables measure civilian well-being beyond macroeconomic averages.
+
+
+Integration Strategy
+
+All tables share country and year as primary join keys, allowing flexible panel analysis across sanction intensity, economic outcomes, trade shocks, and social indicators.
+
+This structure enables:
+
+- Cross-sectional comparisons between countries
+- Before-and-after sanction analysis
+- Difference-in-Differences modeling
+- Event-study design
+
+
+Reproducibility
+
+The entire database is generated programmatically using Python scripts included in the repository. The workflow includes:
+
+- Data cleaning and normalization
+- Variable standardization
+- Automated table creation
+- Validation checks
+
+Because the database is built directly from raw public datasets, it can be fully recreated at any time, ensuring transparency and reproducibility.
