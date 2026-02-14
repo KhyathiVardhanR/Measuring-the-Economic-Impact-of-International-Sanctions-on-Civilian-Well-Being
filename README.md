@@ -1,4 +1,4 @@
-Assessing the Civilian Impact of International Sanctions on Economic and Social Well-Being
+## Assessing the Civilian Impact of International Sanctions on Economic and Social Well-Being
 
 Heilmeier Catechism – Project Overview
 
