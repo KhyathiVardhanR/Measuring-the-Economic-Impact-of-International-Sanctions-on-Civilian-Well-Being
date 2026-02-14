@@ -5,61 +5,77 @@ Assessing the Civilian Impact of International Sanctions on Economic and Social 
 
 Problem Statement
 
-International sanctions are intended to pressure governments, but their economic effects are often felt most strongly by civilians. While traditional analysis focuses on GDP, inflation, and unemployment, these macroeconomic indicators do not fully capture how sanctions affect everyday life.
+International sanctions are designed to impose economic costs in order to alter government behavior. However, these costs are frequently transmitted through domestic markets and civilian populations. While traditional analyses emphasize macroeconomic indicators such as GDP growth, inflation, and unemployment, these measures alone do not fully capture how sanctions affect household welfare and everyday living conditions.
 
-Sanctions can disrupt trade, restrict access to foreign currency, reduce imports of essential goods such as food and medicine, and increase prices. These economic shocks may translate into higher poverty, worsening child health, rising inequality, and reduced household welfare.
+Sanctions can restrict trade, limit access to foreign currency and financial systems, reduce imports of essential goods such as food and medicine, and generate price instability. These disruptions may translate into higher poverty rates, rising inequality, worsening child health outcomes, and broader declines in civilian welfare. In addition, economic stress may coincide with political instability or leadership turnover.
 
-This project examines whether international sanctions are associated with measurable changes in both economic and social indicators of civilian well-being over time.
+This project evaluates whether international sanctions generate measurable economic and social hardship for civilians, and through which economic transmission mechanisms these effects operate.
 
 
 Research Question
 
-How do international sanctions affect civilian economic and social well-being, including macroeconomic conditions and household-level outcomes, over time?
+How do international sanctions affect civilian economic and social well-being over time, through what economic channels do these effects propagate, and do these pressures coincide with political instability?
 
 
 Defined Inputs (Data)
 
-The project combines multiple data sources:
+The project integrates four primary datasets to construct a country-year panel framework:
 
 1. Sanctions Data
 - Sanction start and end dates
-- Type of sanctions (financial, trade, sectoral, targeted)
-- Severity indicators (number of sectors targeted, oil bans, banking restrictions, humanitarian exemptions)
-Sources: Global Sanctions Data Base (GSDB), UN records, US Treasury (OFAC), EU sanctions database.
+- Type and scope of sanctions (financial, trade, sectoral, targeted)
+- Duration and intensity indicators
+Source: Global Sanctions Data Base (GSDB)
 
-2. Economic Indicators
+2. Trade Data (Transmission Mechanism)
+- Food imports
+- Medicine imports
+- Oil exports
+- Fuel imports
+Source: UN Comtrade
+
+These variables capture how sanctions affect international trade flows and essential goods availability.
+
+3. Macroeconomic and Social Indicators
 - GDP growth
 - Inflation rate
 - Unemployment rate
-- Sectoral trade data (food, medicine, oil)
-Sources: World Bank (WDI), IMF, ILOSTAT, UN Comtrade.
-
-3. Household and Social Indicators
 - Poverty rate
 - Income inequality (Gini index)
-- Child mortality (under-5 mortality rate)
-- Nutrition and health indicators
+- Under-5 child mortality rate
 - School enrollment
-Sources: DHS surveys, UNICEF MICS, World Bank databases.
+Source: World Bank World Development Indicators (WDI)
 
-These variables allow measurement of both national economic shocks and real household-level impacts.
+These indicators measure both national economic performance and household-level well-being.
+
+4. Political and Conflict Indicators
+- Armed conflict incidence and intensity
+- Regime type and political stability
+- Leadership turnover events
+Sources: UCDP Armed Conflict Dataset, Polity V, Archigos
+
+These variables help distinguish sanction effects from war-related economic shocks and allow exploration of whether economic hardship coincides with political instability.
 
 
 Defined Outputs
 
 The project will produce:
 
-- Time-series graphs showing trends before and after sanctions
-- Statistical regression analysis estimating the relationship between sanctions and civilian outcomes
-- Comparative analysis of targeted versus broader sanctions
-- A potential composite civilian well-being index combining economic and social indicators
+- Descriptive time-series analysis of sanctions and civilian outcomes
+- Event-study visualizations of pre- and post-sanction dynamics
+- Panel regression models with country and year fixed effects
+- Mechanism testing through trade-mediated channels
+- Comparative analysis of sanction types and intensity
+- Exploratory analysis of political instability and leadership turnover
 
 
 Time Horizon
 
-The analysis will cover the period from 2000 to 2023, depending on data availability. This allows examination of multiple sanction episodes and long-term effects.
+The analysis covers the period from 2000 to 2023, depending on data availability. This timeframe captures multiple sanction episodes and allows examination of both short-term and medium-term dynamic effects.
 
 
 Why This Problem Matters
 
-Sanctions are often described as targeted tools against governments, yet evidence suggests civilians may bear much of the economic cost. By combining macroeconomic, trade, and household-level data, this project provides a more complete and data-driven assessment of how sanctions affect civilian well-being.
+Sanctions are often described as targeted tools aimed at influencing governments. However, economic disruptions may disproportionately affect civilian populations through trade contraction, price instability, and reduced access to essential goods.
+
+By integrating sanctions data with trade flows, macroeconomic indicators, social welfare measures, and political controls within a structured panel framework, this project provides a rigorous and multidimensional assessment of the civilian consequences of international sanctions. The findings aim to contribute to policy debates regarding the humanitarian implications and effectiveness of economic coercion.
