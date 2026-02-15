@@ -1,0 +1,100 @@
+Data Exploration – Milestone 1
+
+
+Overview
+
+Initial exploratory data analysis (EDA) was conducted to examine the structure, consistency, and variation within the multidimensional country-year panel dataset. The dataset integrates sanctions intensity measures, trade transmission variables, macroeconomic indicators, household-level welfare measures, and political/conflict controls.
+
+The purpose of this stage was to assess data quality, evaluate cross-country and temporal variation, identify potential confounders, and determine feasibility for fixed-effects and event-study estimation.
+
+
+Descriptive Statistics
+
+Summary statistics were generated for key treatment, mechanism, outcome, and control variables:
+
+Treatment Variables:
+- Sanction active indicator
+- Sanction duration
+- Constructed sanction intensity index
+
+Transmission Mechanism:
+- Food imports
+- Pharmaceutical imports
+- Oil exports
+- Fuel imports
+
+Macroeconomic Outcomes:
+- GDP growth
+- Inflation rate
+- Unemployment rate
+
+Household and Social Outcomes:
+- Poverty rate
+- Income inequality (Gini index)
+- Under-5 child mortality
+- School enrollment
+
+Political and Conflict Controls:
+- Armed conflict incidence
+- Conflict intensity
+- Regime type score
+- Leadership turnover indicator
+
+Descriptive statistics revealed substantial cross-country heterogeneity in sanction exposure, trade flows, and welfare indicators, supporting the suitability of panel modeling.
+
+
+Visual Exploration
+
+Time-series and event-aligned plots were constructed to evaluate:
+
+- Pre- and post-sanction dynamics in trade flows
+- Inflation and GDP responses following sanction onset
+- Changes in poverty and child mortality after prolonged sanctions
+- Political instability indicators during high-intensity sanction periods
+
+Preliminary patterns suggest that sanction episodes often coincide with trade contraction and inflation volatility. In some cases, prolonged sanctions are associated with worsening social indicators. However, effects are heterogeneous and not uniform across countries.
+
+These findings reinforce the importance of structured econometric identification rather than simple correlation.
+
+
+Missing Values and Data Quality Assessment
+
+Several data challenges were identified:
+
+- Missing unemployment and poverty data for earlier years in certain countries
+- Gaps in social indicators for lower-income countries
+- Trade reporting inconsistencies in early 2000s data
+- Structural breaks in economic variables during armed conflict periods
+
+Conflict variables were cross-referenced to identify years where war-related shocks may confound sanction effects.
+
+Future data preparation steps include:
+
+- Harmonizing country codes across datasets
+- Addressing missing values through careful imputation or balanced-panel restrictions
+- Testing robustness under alternative sample specifications
+
+
+Preliminary Observations
+
+Exploratory analysis suggests that sanction periods are frequently associated with:
+
+- Declines in essential goods trade flows
+- Increased inflation volatility
+- Deterioration in selected welfare indicators under prolonged exposure
+
+However, because sanctions are not randomly assigned and often coincide with geopolitical crises, these patterns cannot be interpreted causally without controlling for country fixed effects, year effects, and conflict variables.
+
+
+Next Steps
+
+The next phase will transition from descriptive analysis to formal econometric modeling:
+
+- Implement two-way fixed-effects panel regressions
+- Conduct event-study analysis to test dynamic effects
+- Evaluate lagged responses of trade and welfare indicators
+- Test mediation effects through trade transmission channels
+- Include conflict and regime controls to strengthen causal interpretation
+- Perform robustness checks using alternative sanction intensity specifications
+
+These steps will allow rigorous evaluation of whether sanctions generate measurable civilian hardship and whether economic stress coincides with political instability.

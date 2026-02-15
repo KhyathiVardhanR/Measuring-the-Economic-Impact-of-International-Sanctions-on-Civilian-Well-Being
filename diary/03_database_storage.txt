@@ -1,0 +1,121 @@
+Data Acquisition II – Database Storage
+
+
+Overview
+
+To integrate sanctions, trade, macroeconomic, social, and political datasets into a unified analytical structure, a relational database was implemented using SQLite. Organizing the data in a structured relational format ensures consistency, efficient querying, and scalable integration of multiple sources.
+
+The database supports the construction of a harmonized country-year panel dataset suitable for fixed-effects and event-study analysis.
+
+
+Database Choice
+
+SQLite was selected because it is lightweight, portable, and well-suited for research-scale panel datasets. It integrates seamlessly with Python and pandas, enabling automated data cleaning, transformation, and reproducible database generation.
+
+Its file-based architecture ensures portability and full reproducibility of the empirical workflow.
+
+
+Database Schema
+
+The database follows a country-year panel design. All tables use standardized country codes and calendar year as primary keys to ensure alignment across datasets.
+
+The schema includes the following core tables:
+
+
+1. Sanctions Table
+
+This table stores structured sanctions data derived from the Global Sanctions Data Base (GSDB).
+
+Each record includes:
+
+- Country
+- Year
+- Sanction start indicator
+- Sanction active indicator
+- Sanction type (financial, trade, sectoral, targeted)
+- Duration measures
+- Constructed sanction intensity index
+
+This table defines the primary treatment variable in the empirical analysis.
+
+
+2. Trade Table (Transmission Mechanism)
+
+This table captures trade-related transmission channels using aggregated UN Comtrade data.
+
+Each record includes:
+
+- Country
+- Year
+- Food imports
+- Pharmaceutical imports
+- Oil exports
+- Fuel imports
+
+These variables measure changes in essential goods flows and allow mechanism testing between sanctions and welfare outcomes.
+
+
+3. Macroeconomic and Social Indicators Table
+
+This table integrates economic and household-level indicators from the World Bank WDI.
+
+Each record includes:
+
+- Country
+- Year
+- GDP growth
+- Inflation rate
+- Unemployment rate
+- Poverty rate
+- Income inequality (Gini index)
+- Under-5 child mortality
+- School enrollment
+
+These indicators measure both aggregate economic performance and civilian welfare.
+
+
+4. Political and Conflict Table
+
+This table includes political and conflict variables to strengthen identification.
+
+Sources include UCDP, Polity V, and Archigos.
+
+Each record includes:
+
+- Country
+- Year
+- Armed conflict indicator
+- Conflict intensity
+- Regime type score
+- Leadership turnover indicator
+
+These variables allow the analysis to control for war-related shocks and explore potential political instability associated with economic hardship.
+
+
+Integration Strategy
+
+All tables are joined using country and year as shared keys to construct a consolidated panel dataset.
+
+This structure enables:
+
+- Cross-country comparisons
+- Pre- and post-sanction analysis
+- Two-way fixed-effects panel regression
+- Event-study estimation
+- Mediation analysis through trade channels
+- Robustness checks controlling for conflict and regime characteristics
+
+
+Reproducibility
+
+The entire database is generated programmatically using documented Python scripts included in the repository.
+
+The workflow includes:
+
+- Raw data ingestion
+- Country code harmonization
+- Trade aggregation from product-level data
+- Construction of sanction intensity measures
+- Panel merging and validation checks
+
+Because the database is built directly from raw public datasets, it can be fully recreated at any time, ensuring transparency, replicability, and methodological rigor appropriate for master’s-level research.
